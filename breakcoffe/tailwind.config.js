@@ -15,7 +15,9 @@ module.exports = {
       colors:{
         'primary': '#5D5D6D',
         'secondary': '#F3F5F6',
+        'terciary': '#DEDEDE',
         'TextosDark': '#737380',
+        'hrOrange': '#FFA585'
 
       },
       width: {
