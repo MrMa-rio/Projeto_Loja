@@ -21,6 +21,9 @@ module.exports = {
       width: {
         '88': '22rem',
       },
+      maxWidth: {
+        '88': '22rem',
+      },
       screens: {
         'ssm': '330px',
         'sm': '390px',
