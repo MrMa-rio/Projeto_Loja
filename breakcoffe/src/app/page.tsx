@@ -9,7 +9,7 @@ export default function Home() {
     <QueryClientProvider client={client} >
       <main className="h-full px-6 mini-tela:px-40 bg-terciary">
         <FiltersItems />
-        <ProductList  />
+        <ProductList />
       </main>
     </QueryClientProvider>
     

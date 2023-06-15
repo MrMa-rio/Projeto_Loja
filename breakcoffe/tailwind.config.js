@@ -17,14 +17,24 @@ module.exports = {
         'secondary': '#F3F5F6',
         'terciary': '#DEDEDE',
         'TextosDark': '#737380',
+        'TextosDark2': '#41414D',
+        'ShapesColor': '#DCE2E5',
+        'ShapesDarkColor': '#09090A',
         'hrOrange': '#FFA585'
 
       },
       width: {
         '88': '22rem',
       },
+      height: {
+        '76': '18.75rem'
+      },
       maxWidth: {
         '88': '22rem',
+      },
+      gridTemplateColumns: {
+        // Simple 16 column grid
+        'auto': 'repeat(auto-fill, 256px)',
       },
       screens: {
         'ssm': '330px',
