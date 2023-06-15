@@ -19,7 +19,7 @@ export const FilterContextProvider = ({children}:ProviderProps) =>{
     const [search, setSearch] = useState('')
     const [page, setPage] = useState(1)
     const [type, setType] = useState(FilterType.TODOS)
-    const [priority, setPriority] = useState(PriorityTypes.NOVOS)
+    const [priority, setPriority] = useState(PriorityTypes.POPULAR)
     return(
         <FilterContext.Provider value={{search, page, type, setSearch, setPage, setType, priority, setPriority}}>
             {children}

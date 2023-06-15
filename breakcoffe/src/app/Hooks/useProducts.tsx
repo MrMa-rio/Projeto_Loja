@@ -2,48 +2,23 @@
 import { useQuery } from "@tanstack/react-query"
 import axios, { AxiosPromise } from "axios"
 import { ProductsFetchResponse } from "../Types/ProductsFetchResp/ProductsFetchResp"
-import { FilterType } from "../Types/Filters/Filters"
-import { CategoryType } from "../Utility/CategoryType/CategoryType"
+import { mountQuery } from "../Utility/GraphiQLFilters/GraphiQLFilter"
 import { useFilter } from "./useFilter"
-
-
+import { useDeferredValue } from "react"
 const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> =>{
     return axios.post('http://localhost:3333',{query})
 }
-const mountQuery = (type:FilterType) => {
-    if(type === FilterType.TODOS) return `
-        query{
-            allProducts {
-            id
-            name
-            image_url
-            price_in_cents
-            category
-            }
-        }
-    `
-    return `query{
-        allProducts(filter:{category: "${CategoryType(type)}"}) {
-          id
-          name
-          image_url
-          price_in_cents
-          category
-        }
-      }
-    
-    `
-}
-
 export const useProducts = () =>{
-    const { type } = useFilter()
-    const query = mountQuery(type)
+    const { type, priority, search } = useFilter()
+    const searchDeferred = useDeferredValue(search)
+    const query = mountQuery(type, priority)
     const { data } = useQuery({
         queryFn: () => fetcher(query),
-        queryKey: ['products', query]
+        queryKey: ['products', type, priority]
     })
+    const products = data?.data?.data?.allProducts
+    const filterProducts = products?.filter(product => product.name.toLowerCase().includes(searchDeferred.toLowerCase()))
     return {
-        data: data?.data?.data?.allProducts
+        data: filterProducts
     }
-
 }

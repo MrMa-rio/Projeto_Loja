@@ -1,6 +1,8 @@
+import { useFilter } from "@/app/Hooks/useFilter"
 import { Search } from "lucide-react"
 
 export const InputText = () => {
+    const {setSearch, search} = useFilter()
     return(
         <>
             <input 
@@ -9,6 +11,8 @@ export const InputText = () => {
                 name="busca" 
                 id="busca" 
                 placeholder='Procurando por algo específico?'
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
             />
             <Search className='bg-secondary stroke-primary w-10 h-10 pr-3 rounded-e-md' />
                     

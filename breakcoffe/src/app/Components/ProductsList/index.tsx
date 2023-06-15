@@ -4,6 +4,7 @@ import { ProductCard } from "../ProductCard/ProductCard"
 
 export const ProductList = () =>{
     const { data } = useProducts()
+   
     return(
         
         <div>
@@ -20,6 +21,9 @@ export const ProductList = () =>{
                         )
                     })
                 }
+                {data?.length == 0 ?
+                    <p className="w-full text-center">Nenhum resultado encontrado</p>
+                 : ''}
             </div>
         </div>
     )
