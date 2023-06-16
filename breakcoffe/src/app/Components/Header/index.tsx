@@ -9,7 +9,7 @@ const Saira = Saira_Stencil_One({
     })
 export const Header = () => {
     return(
-        <header className='bg-white'>
+        <header className='bg-white fixed top-0 w-full'>
             <section className="flex justify-between items-center gap-10 w-full h-20 px-6 mini-tela:px-40">
                 <div>
                     <h1 className={`${Saira.className} text-2xl mini-tela:text-4xl text-primary `} >BreakCoffe</h1>

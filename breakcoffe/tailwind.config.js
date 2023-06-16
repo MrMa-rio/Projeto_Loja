@@ -20,20 +20,23 @@ module.exports = {
         'TextosDark2': '#41414D',
         'ShapesColor': '#DCE2E5',
         'ShapesDarkColor': '#09090A',
-        'hrOrange': '#FFA585'
+        'hrOrange': '#FFA585',
+        'BrandBlue': '#115D8C',
 
       },
       width: {
         '88': '22rem',
+        '112': '28rem',
+        '160': '40rem',
       },
       height: {
-        '76': '18.75rem'
+        '76': '18.75rem',
+        '145': '36.25rem'
       },
       maxWidth: {
         '88': '22rem',
       },
       gridTemplateColumns: {
-        // Simple 16 column grid
         'auto': 'repeat(auto-fill, 256px)',
       },
       screens: {
@@ -45,7 +48,15 @@ module.exports = {
         'tela': '890px',
         'mxl': '1000px'
       },
+      customStyles: {
+        'defaultPage': 'px-6 mini-tela:px-40 h-full bg-terciary',
+      },
 
+    },
+    variants: {
+      extend: {
+        customStyles: ['responsive', 'hover', 'focus'],
+      },
     },
     
     

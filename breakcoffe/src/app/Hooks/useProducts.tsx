@@ -6,7 +6,7 @@ import { mountQuery } from "../Utility/GraphiQLFilters/GraphiQLFilter"
 import { useFilter } from "./useFilter"
 import { useDeferredValue } from "react"
 const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> =>{
-    return axios.post('http://localhost:3333',{query})
+    return axios.post('https://4124-177-200-73-137.ngrok-free.app/',{query})
 }
 export const useProducts = () =>{
     const { type, priority, search } = useFilter()

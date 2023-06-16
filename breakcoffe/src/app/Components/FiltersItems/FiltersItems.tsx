@@ -6,7 +6,7 @@ import { FilterType } from "./FilterType"
 export const FiltersItems = () => {
     
     return(
-        <div className="mt-9 flex items-start justify-between flex-row gap-5">
+        <div className="mt-28 flex items-start justify-between flex-row gap-5">
             <FilterType />
             <FilterPriority />
         </div>

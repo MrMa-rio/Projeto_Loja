@@ -1,3 +1,5 @@
+'use client'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Header } from './Components/Header'
 import { FilterContextProvider } from './Contexts/Filters/Filters'
 import './globals.css'
@@ -12,6 +14,7 @@ export const metadata = {
   title: 'BreakCoffe',
   description: 'Loja Virtual de Camisetas e Canecas',
 }
+const client = new QueryClient()
 
 export default function RootLayout({
   children,
@@ -21,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${saira.className} bg-terciary`}>
-        <FilterContextProvider >
-          <Header />
-          {children}
-        </FilterContextProvider>
+        <QueryClientProvider client={client}>
+          <FilterContextProvider >
+            <Header />
+            {children}
+          </FilterContextProvider>
+        </QueryClientProvider>
         
       </body>
     </html>
