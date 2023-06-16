@@ -8,7 +8,7 @@ export default function DetailProduct({searchParams}:{searchParams:{id:string}})
     const {data} = useProduct(searchParams.id)
     return(
         <div className="flex flex-col mt-28 gap-2 px-6 mini-tela:px-40">
-            <div><BtnBackIcon navigate={"/"} /></div>
+            <div className="w-fit"><BtnBackIcon navigate={"/"} /></div>
             <div className="flex flex-col xl:flex-row items-center xl:items-start gap-8">
                 <img 
                     src={data?.image_url} 

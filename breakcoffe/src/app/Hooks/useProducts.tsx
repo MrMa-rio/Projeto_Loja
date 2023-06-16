@@ -5,8 +5,11 @@ import { ProductsFetchResponse } from "../Types/ProductsFetchResp/ProductsFetchR
 import { mountQuery } from "../Utility/GraphiQLFilters/GraphiQLFilter"
 import { useFilter } from "./useFilter"
 import { useDeferredValue } from "react"
+
+const api_url = process.env.NEXT_PUBLIC_API_URL as string
+
 const fetcher = (query: string): AxiosPromise<ProductsFetchResponse> =>{
-    return axios.post('https://4124-177-200-73-137.ngrok-free.app/',{query})
+    return axios.post(api_url,{query})
 }
 export const useProducts = () =>{
     const { type, priority, search } = useFilter()

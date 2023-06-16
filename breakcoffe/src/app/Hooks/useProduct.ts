@@ -3,8 +3,10 @@ import axios, { AxiosPromise } from "axios"
 import { ProductDetail } from "../Types/ProductFetchResp/ProductFetchResp"
 import { useQuery } from "@tanstack/react-query"
 
+const api_url = process.env.NEXT_PUBLIC_API_URL as string
+
 const fetcher = (productId: string): AxiosPromise<ProductDetail> =>{
-    return axios.post('https://4124-177-200-73-137.ngrok-free.app/',{
+    return axios.post(api_url,{
         query:`
         query{
             Product(id: "${productId}"){
@@ -21,7 +23,8 @@ const fetcher = (productId: string): AxiosPromise<ProductDetail> =>{
 export const useProduct = (id:string) =>{
     const { data } = useQuery({
         queryFn: () => fetcher(id),
-        queryKey: ['product', id]
+        queryKey: ['product', id],
+        enabled: !!id
     })
     return{
         data: data?.data?.data?.Product

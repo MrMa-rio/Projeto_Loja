@@ -1,16 +1,23 @@
 import { centavosParaReais } from "@/app/Utility/ConversorMoeda/script"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 interface ProductCardProps {
     title: string,
     image: string,
     price: number,
+    id: string
 }
 
 export const ProductCard = (props: ProductCardProps) => {
+    const navigate = useRouter()
+
+    const handleNavigate = () =>{
+        navigate.push(`/product?id=${props.id}`)
+    }
 
     return(
-        <div className="flex flex-col w-fit bg-white bg-opacity-40 rounded-md">
+        <div onClick={handleNavigate} className="flex flex-col w-fit bg-white bg-opacity-40 rounded-md cursor-pointer">
             <img 
                 src={props.image} 
                 alt={props.title}

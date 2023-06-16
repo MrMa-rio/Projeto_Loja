@@ -13,6 +13,7 @@ export const ProductList = () =>{
                     data?.map((result) => {
                         return(
                             <ProductCard
+                            id={result.id}
                             key={result.id}
                             image={result.image_url}
                             price={result.price_in_cents}
