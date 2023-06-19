@@ -16,10 +16,13 @@ module.exports = {
         'primary': '#5D5D6D',
         'secondary': '#F3F5F6',
         'terciary': '#DEDEDE',
+        'quartenary': '#51B853',
         'TextosDark': '#737380',
         'TextosDark2': '#41414D',
+        'TextosDark3': '#A8A8B3',
         'ShapesColor': '#DCE2E5',
         'ShapesDarkColor': '#09090A',
+        'ShapesLightColor': '#F5F5FA',
         'hrOrange': '#FFA585',
         'BrandBlue': '#115D8C',
 
@@ -28,12 +31,16 @@ module.exports = {
         '88': '22rem',
         '112': '28rem',
         '160': '40rem',
+        '184': '46rem',
+
       },
       height: {
         '76': '18.75rem',
-        '145': '36.25rem'
+        '145': '36.25rem',
+        '175': '43.74rem'
       },
       maxWidth: {
+        '45.25': '13.31rem',
         '88': '22rem',
       },
       gridTemplateColumns: {

@@ -34,7 +34,10 @@ export default function DetailProduct({searchParams}:{searchParams:{id:string}})
                                 <p className="text-sm leading-6">{data?.description}</p>
                             </div>
                         </div>
-                        <button onClick={() => handleAddCart(data, searchParams.id)} className="flex gap-2 justify-center items-center w-full text-white py-2.5 bg-BrandBlue "> <ShoppingBag /> ADICIONAR AO CARRINHO </button>
+                        <button onClick={() => {handleAddCart(data, searchParams.id)}} className="flex gap-2 justify-center items-center w-full text-white py-2.5 bg-BrandBlue ">
+                            <ShoppingBag /> 
+                            <p>ADICIONAR AO CARRINHO</p>
+                        </button>
                     </div>
                 </div>
             </div>

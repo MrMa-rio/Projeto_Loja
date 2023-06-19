@@ -7,6 +7,10 @@ export interface ProductFetchResponse {
     category?: string
 }
 
+export interface ProductInCart extends ProductFetchResponse{
+    quantity: number
+}
+
 export interface ProductDetail {
     data:{
         Product: ProductFetchResponse

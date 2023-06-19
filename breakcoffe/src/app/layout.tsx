@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <body className={`${saira.className} bg-terciary`}>
         <QueryClientProvider client={client}>
           <FilterContextProvider >
