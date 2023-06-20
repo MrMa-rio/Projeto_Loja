@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "json-graphql-server db.js --p 3333"
+    "start": "json-graphql-server db.js"
   },
   "dependencies": {
     "faker": "^5.5.3",
