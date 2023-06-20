@@ -9,9 +9,8 @@ import { ReactNode } from 'react'
 const saira = Saira({
   weight: ['300', '400', '500', '600'],
   subsets: ['latin'] 
-  })
-
-export const metadata = {
+})
+  const metadata = {
   title: 'BreakCoffe',
   description: 'Loja Virtual de Camisetas e Canecas',
 }
