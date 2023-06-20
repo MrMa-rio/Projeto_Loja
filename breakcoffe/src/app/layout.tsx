@@ -4,6 +4,7 @@ import { Header } from './Components/Header'
 import { FilterContextProvider } from './Contexts/Filters/Filters'
 import './globals.css'
 import { Saira } from 'next/font/google'
+import { ReactNode } from 'react'
 
 const saira = Saira({
   weight: ['300', '400', '500', '600'],
@@ -14,13 +15,13 @@ export const metadata = {
   title: 'BreakCoffe',
   description: 'Loja Virtual de Camisetas e Canecas',
 }
-const client = new QueryClient()
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
+
+export default function RootLayout({children}: {
+  children: ReactNode
 }) {
+  
+  const client = new QueryClient()
   return (
     <html lang="en">
       <body className={`${saira.className} bg-terciary`}>
@@ -30,7 +31,6 @@ export default function RootLayout({
             {children}
           </FilterContextProvider>
         </QueryClientProvider>
-        
       </body>
     </html>
   )

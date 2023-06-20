@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation"
-import { BackIcon } from "./icon"
+import  BackIcon  from "./icon.svg"
+import Image from "next/image"
 
 interface BtnProps {
     navigate: string
@@ -12,7 +13,7 @@ export const BtnBackIcon = ({navigate}:BtnProps) => {
     }
     return(
         <div onClick={handleNavigate} className="flex gap-2 cursor-pointer">
-            <BackIcon />
+            <Image src={BackIcon} alt="Backicon" />
             <p>Voltar</p>
         </div>
     )

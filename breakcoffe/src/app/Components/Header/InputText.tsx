@@ -36,7 +36,7 @@ export const InputText = () => {
                 
                 {data?.map((item) =>{
                     return(
-                        <ProductListSearch handleShow={() => setIsShow(false)}  item={item}/>
+                        <ProductListSearch key={item.id} handleShow={() => setIsShow(false)}  item={item}/>
                     )
                 })}
                 
