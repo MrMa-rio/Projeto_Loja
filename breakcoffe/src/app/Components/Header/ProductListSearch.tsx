@@ -21,7 +21,7 @@ export const ProductListSearch = ({item,handleShow}:ProductFetch) =>{
                 />
                 <div className=" text-sm mini-tela:text-base">
                     <p>{item.category}</p>
-                    <p className="w-full overflow-y-hidden h-4">{item.name}</p>
+                    <p className="w-full overflow-y-hidden h-5">{item.name}</p>
                     <p className="font-semibold">{centavosParaReais(item.price_in_cents)}</p>
                 </div>
             </div>

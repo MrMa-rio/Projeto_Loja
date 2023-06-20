@@ -29,16 +29,16 @@ export const InputText = () => {
                         handleIsShow(e)
                     }}
                 />
-                <Search className='bg-secondary stroke-primary w-8 h-10 mini-tela:w-10 pr-3 rounded-e-md' />
+                <Search className='bg-secondary stroke-primary w-8 h-fit mini-tela:w-10 pr-3 rounded-e-md' />
             
             </div>
-            {isShow ? <div className="absolute w-full mt-1 max-w-45.25 mini-tela:max-w-88 h-56 mini-tela:h-60 overflow-hidden bg-white">
+            {isShow ? <div className="absolute w-full mt-1 max-w-45.25 mini-tela:max-w-88 h-fit bg-white">
                 
-                {data?.map((item) =>{
-                    return(
-                        <ProductListSearch key={item.id} handleShow={() => setIsShow(false)}  item={item}/>
-                    )
-                })}
+                {data?.map((item,index) => index < 3 
+                    ? 
+                    <ProductListSearch key={item.id} handleShow={() => setIsShow(false)}  item={item}/> 
+                    : <></>
+                )}
                 
             </div> : <></>}
         </div>
