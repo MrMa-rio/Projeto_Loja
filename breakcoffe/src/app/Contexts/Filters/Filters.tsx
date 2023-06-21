@@ -2,9 +2,9 @@
 import { ReactNode, createContext, useState } from "react";
 import { FilterType } from "@/app/Types/Filters/Filters";
 import { PriorityTypes } from "@/app/Types/Priority/Priority";
-export  const FilterContext = createContext({
+export const FilterContext = createContext({
     search: '',
-    page: 1,
+    page: 0,
     type: FilterType.TODOS,
     priority: PriorityTypes.NOVOS,
     setPriority: (value:PriorityTypes) => {},
@@ -17,7 +17,7 @@ interface ProviderProps{
 }
 export const FilterContextProvider = ({children}:ProviderProps) =>{
     const [search, setSearch] = useState('')
-    const [page, setPage] = useState(1)
+    const [page, setPage] = useState(0)
     const [type, setType] = useState(FilterType.TODOS)
     const [priority, setPriority] = useState(PriorityTypes.POPULAR)
     return(

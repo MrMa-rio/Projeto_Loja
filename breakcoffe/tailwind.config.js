@@ -23,6 +23,7 @@ module.exports = {
         'ShapesColor': '#DCE2E5',
         'ShapesDarkColor': '#09090A',
         'ShapesLightColor': '#F5F5FA',
+        'ShapesLightColorGray': '#E9E9F0',
         'hrOrange': '#FFA585',
         'BrandBlue': '#115D8C',
 

@@ -8,13 +8,10 @@ interface ProductCart {
     handleQuantityProduct (id:string, quantity:number): void
     handleDelete(id:string): void
 }
-
 export const ProductDetailCart = ({product,handleQuantityProduct, handleDelete}:ProductCart) =>{
-
     const handleQuantity = (e:ChangeEvent<HTMLSelectElement>) =>{
         handleQuantityProduct(product.id, Number(e.target.value))
     }
-    
     return(
         <div className="flex gap-8 bg-white pr-4 rounded-lg">
             <img 

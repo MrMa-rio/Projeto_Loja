@@ -8,10 +8,10 @@ import { CalculateTotal } from "../Utility/CalculateTotal/CalculateTotal";
 
 export default function CartPage(){
 
-    const {value, updateLocalStorage} = useLocalStorage<ProductInCart[]>('cart-items', [])
+    const {value, updateLocalStorage} = useLocalStorage<any[]>('cart-items', [])
     const cartTotal = CalculateTotal(value)
     const handleQuantityProduct = (id:string, quantity:number) =>{
-        const newValue = value.map(item => {
+        const newValue = value.map((item: { id: string; }) => {
             if(item.id !== id) return item
             return {
                 ...item,
@@ -21,7 +21,7 @@ export default function CartPage(){
         updateLocalStorage(newValue)
     }
     const handleDelete = (id: string) =>{
-        const newValue = value.filter(item => item.id !== id)
+        const newValue = value.filter((item: { id: string; }) => item.id !== id)
         updateLocalStorage(newValue)
     }
     
@@ -37,7 +37,7 @@ export default function CartPage(){
                     </div>
                 </div>
                 <div className="flex flex-col gap-4 mt-6">
-                    {value.map(item => 
+                    {value.map((item: ProductInCart) => 
                         <ProductDetailCart 
                             key={item.id} product={item}
                             handleDelete={handleDelete} 

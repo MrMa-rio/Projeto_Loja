@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 export const useLocalStorage = <T>(item:string, initialValue:T) => {
 
-    const [value, setValue] = useState(initialValue)
+    const [value, setValue] = useState<any>(initialValue)
     useEffect(()=>{
         if(typeof globalThis === 'undefined') return
         let valueItem = localStorage.getItem(item)

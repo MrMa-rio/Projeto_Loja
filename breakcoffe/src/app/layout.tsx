@@ -26,8 +26,9 @@ export default function RootLayout({children}: {
       <body className={`${saira.className} bg-terciary`}>
         <QueryClientProvider client={client}>
           <FilterContextProvider >
-            <Header />
+            
             {children}
+            <Header />
           </FilterContextProvider>
         </QueryClientProvider>
       </body>

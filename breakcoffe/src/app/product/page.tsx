@@ -9,7 +9,7 @@ export default function DetailProduct({searchParams}:{searchParams:{id:string}})
     const {data} = useProduct(searchParams.id)
     if(data?.name){
         return(
-            <div className="flex flex-col mt-28 gap-2 px-6 mini-tela:px-40">
+            <div className="flexz flex-col mt-28 gap-2 px-6 mini-tela:px-40">
                 <div className="w-fit"><BtnBackIcon navigate={"/"} /></div>
                 <div className="flex flex-col xl:flex-row items-center xl:items-start gap-8">
                     <img 
@@ -34,7 +34,7 @@ export default function DetailProduct({searchParams}:{searchParams:{id:string}})
                                 <p className="text-sm leading-6">{data?.description}</p>
                             </div>
                         </div>
-                        <button onClick={() => {handleAddCart(data, searchParams.id)}} className="flex gap-2 justify-center items-center w-full text-white py-2.5 bg-BrandBlue ">
+                        <button onClick={() => {handleAddCart(data, searchParams.id);}} className="flex gap-2 justify-center items-center w-full text-white py-2.5 bg-BrandBlue ">
                             <ShoppingBag /> 
                             <p>ADICIONAR AO CARRINHO</p>
                         </button>

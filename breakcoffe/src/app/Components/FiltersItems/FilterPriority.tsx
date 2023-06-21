@@ -16,7 +16,7 @@ export const FilterPriority = () => {
         handleShow()
     }
     return(
-        <div className="flex w-fit flex-col justify-center items-center text-TextosDark">
+        <div className="flex w-fit flex-col justify-center items-center text-TextosDark z-50">
             <button onClick={handleShow} className="hidden mini-tela:flex justify-end gap-2 cursor-pointer">
                 <p>Organizar por</p>
                 <ChevronDown className="stroke-TextosDark" />
@@ -36,3 +36,43 @@ export const FilterPriority = () => {
         </div>
     )
 }
+
+
+/*
+
+
+    #Conhecimento basico em graphiQL
+    #Manipulação do localStorage
+    #Amadurecimento no React com Typescript
+    #Aprendendo a criar hooks e interfaces
+    
+
+me ajude a cria um depoimento para um post de desenvolvimento de um projeto de loja para fins de estudo.
+Nele coloquei em pratica:
+    #Conhecimento basico em graphiQL
+    #Manipulação do localStorage
+    #Amadurecimento no React com Typescript
+    #Aprendendo a criar hooks e interfaces
+
+Faça um texto resumido contando como foi minhas dificuldades na criação dessa aplicação web
+
+
+
+
+
+
+    Olá rede!!
+
+    Venho publicar mais um percurso importante dessa minha jornada como dev.
+    Dessa vez estive estudando sobre o armazenamento local do navegador e encontrei esse
+    projeto incrivel da RocketSeat por meio de um video do youtube. No video mostra um desafio 
+    de frontend, e nele pede-se uma aplicação react de uma loja virtual. com isso pude aprender 
+    novas funcionalidades jamais vistas antes por mim, pude aprender uma maneira muito interessante 
+    de desenvolver aplicações seguras e otimizadas. Entender como funciona o armazenamento local do navega-
+    dor foi a chave para poder criar prjetos ainda mais otimizados e me criou varias ideias otimas
+    Com esse projeto pude aprimorar meus conehcimentos em react e typecript com criações de hooks e interfaces
+    que ajudam a deixar o codigo mais limpo e seguro
+
+
+
+*/

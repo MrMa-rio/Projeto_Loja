@@ -3,6 +3,7 @@ import { ProductFetchResponse } from "@/app/Types/ProductFetchResp/ProductFetchR
 export const handleAddCart = (data: ProductFetchResponse, id:string) =>{
     if(data){
         let cartItems = localStorage.getItem('cart-items')
+        
         if(cartItems){
             let cartItemsArray = JSON.parse(cartItems)
             let existingProductIndex = cartItemsArray.findIndex((item:{id:string}) => item.id === id )

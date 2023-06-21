@@ -4,9 +4,7 @@ import { ProductCard } from "../ProductCard/ProductCard"
 
 export const ProductList = () =>{
     const { data } = useProducts()
-   
-    return(
-        
+    return(   
         <div>
             <div className='w-full flex-grow mt-5 mini-tela:mt-10 justify-center grid grid-cols-auto gap-8 '>
                 {
