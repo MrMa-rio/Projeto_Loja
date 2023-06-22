@@ -4,7 +4,7 @@ import { Header } from './Components/Header'
 import { FilterContextProvider } from './Contexts/Filters/Filters'
 import './globals.css'
 import { Saira } from 'next/font/google'
-import { ReactNode } from 'react'
+import { ReactNode, useEffect } from 'react'
 
 const saira = Saira({
   weight: ['300', '400', '500', '600'],
@@ -26,7 +26,6 @@ export default function RootLayout({children}: {
       <body className={`${saira.className} bg-terciary`}>
         <QueryClientProvider client={client}>
           <FilterContextProvider >
-            
             {children}
             <Header />
           </FilterContextProvider>

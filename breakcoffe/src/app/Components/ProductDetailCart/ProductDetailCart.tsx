@@ -23,8 +23,8 @@ export const ProductDetailCart = ({product,handleQuantityProduct, handleDelete}:
                 <div className="flex flex-col gap-3">
                     <div className="flex w-full justify-between">
                         <h3 className="text-xl">{product.name}</h3>
-                        <button onClick={() => handleDelete(product.id)} aria-label="Delete">
-                            <Trash2 className="flex stroke-red-700 " />
+                        <button className="CounterCart p-1" onClick={() => handleDelete(product.id)} aria-label="Delete">
+                            <Trash2 className="CounterCart flex stroke-red-700 " />
                         </button>
                     </div>
                     <p className="text-xs w-full h-12 overflow-clip text-ellipsis">{product.description}</p>
