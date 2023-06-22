@@ -3,9 +3,7 @@ import { ProductFetchResponse } from "@/app/Types/ProductFetchResp/ProductFetchR
 import { CounterCart } from "@/app/Utility/CounterCart/CounterCart";
 import { ShoppingBag } from "lucide-react"
 import { useRouter } from "next/navigation"
-import { useState } from "react";
-
-    
+import { useState } from "react"
 
 export const Cart = () =>{
     const router = useRouter()
